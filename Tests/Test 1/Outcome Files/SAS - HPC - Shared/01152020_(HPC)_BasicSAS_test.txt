@@ -1,0 +1,526 @@
+                            Descriptive statistics                            1
+                                               15:16 Thursday, January 21, 2021
+
+                              The MEANS Procedure
+
+Variable      Label                                                          N
+------------------------------------------------------------------------------
+SEQN          Sequence number                                         40100000
+DMARETHN      Race-ethnicity                                          40100000
+DMARACER      Race                                                    40100000
+DMAETHNR      Ethnicity                                               40100000
+DMPMETRO      Rural/urban code based on USDA code                     40100000
+DMPCREGN      Census region, weighting(Texas in south)                40100000
+SDPPSU6       Total NHANES III pseudo-PSU                             40100000
+SDPSTRA6      Total NHANES III pseudo-stratum                         40100000
+WTPFQX6       Total interviewed sample final weight                   40100000
+WTPFEX6       Total MEC examined sample final weight                  40100000
+WTPFHX6       Total M+H examined sample final weight                  40100000
+BMPWT         Weight (kg) (2 months and over)                         36250000
+BMPHT         Standing height (cm) (2 years and over)                 36250000
+DIABETES      DIABETES:1=YES 2=NO                                     40100000
+SMOKING       SMOKING:1=CURRENT 2=FORMER 3=NEVER                      40100000
+EDUCATION     Highest grade or yr of school completed                 40100000
+HEALTH        Is health in general excellent,...,poor                 40100000
+DENTALHEALTH  Describe natural teeth: excellent...poor                40100000
+CIGARETTES    # cigarettes smoked per day                              9960000
+MARITAL       Marital status                                          40100000
+INCOME20K     Total family 12 month income < $20,000                  40100000
+INCOME        Total family 12 month income group                      40100000
+AGE                                                                   40100000
+SBP           Overall average K1, systolic, BP(age 5+)                35380000
+DBP           Overall average K5, diastolic, BP(age5+)                35380000
+SEX                                                                   40100000
+PIR           Poverty Income Ratio (unimputed income)                 40100000
+HYPERTENSION  Doctor ever told had hypertension/HBP                   39730000
+CHOLESTEROL   Doctor told blood cholesterol level high                19940000
+ELIGSTAT      ELIGIBILITY STATUS FOR MORTALITY FOLLOW-UP              40100000
+MORTSTAT      FINAL MORTALITY STATUS                                  40070000
+PERMTH_INT    PERSON MONTHS OF FOLLOW-UP FROM INTV. DATE              40070000
+PERMTH_EXM    PERSON MONTHS OF FOLLOW-UP FROM MEC/HOME EXAM DATE      36240000
+DIAB          DIABETES FLAG FROM MULTIPLE CAUSE OF DEATH (MCOD)        6760000
+HYPERTEN      HYPERTENSION FLAG FROM MULTIPLE CAUSE OF DEATH (MCOD)    6760000
+HIPFRACT      HIP FRACTURE FLAG FROM MULTIPLE CAUSE OF DEATH (MCOD)    6760000
+DEATH                                                                 40070000
+CVD                                                                   40070000
+CANCER                                                                40070000
+STROKE                                                                 6690000
+COLON                                                                  6690000
+------------------------------------------------------------------------------
+
+  Variable              Mean         Std Dev         Minimum         Maximum
+  --------------------------------------------------------------------------
+  SEQN              26531.57        17168.46      10.0000000        53616.00
+  DMARETHN         1.9174564       0.9150553       1.0000000       4.0000000
+  DMARACER         1.3441397       0.5486522       1.0000000       8.0000000
+  DMAETHNR         2.4438903       0.8829043       1.0000000       3.0000000
+  DMPMETRO         1.5109726       0.4998796       1.0000000       2.0000000
+  DMPCREGN         2.7516209       0.9740543       1.0000000       4.0000000
+  --------------------------------------------------------------------------
+                            Descriptive statistics                            2
+                                               15:16 Thursday, January 21, 2021
+
+                              The MEANS Procedure
+
+  Variable              Mean         Std Dev         Minimum         Maximum
+  --------------------------------------------------------------------------
+  SDPPSU6          1.4947631       0.4999726       1.0000000       2.0000000
+  SDPSTRA6        23.5216958      13.6644927       1.0000000      49.0000000
+  WTPFQX6            9407.52        11601.78     220.8800000       132278.90
+  WTPFEX6            9307.73        12584.79               0       140778.72
+  WTPFHX6            9298.00        12486.03               0       139744.91
+  BMPWT              2035.64        41708.26      31.2400000       888888.00
+  BMPHT          386.5488552         4415.28     130.6000000        88888.00
+  DIABETES         1.9271820       0.2598375       1.0000000       2.0000000
+  SMOKING          2.2600998       0.8289819       1.0000000       3.0000000
+  EDUCATION       11.7508728       9.5660994               0      99.0000000
+  HEALTH           2.7735661       1.1047842       1.0000000       9.0000000
+  DENTALHEALTH     3.7720698       3.3711284       1.0000000      99.0000000
+  CIGARETTES      74.6174699     205.5990744       1.0000000     999.0000000
+  MARITAL          3.5274314       6.1820972       1.0000000      88.0000000
+  INCOME20K        1.6763092       1.1995271               0       9.0000000
+  INCOME          27.1411471      25.9457913               0      99.0000000
+  AGE             47.7369077      20.9094919      17.0000000      90.0000000
+  SBP            126.1020350      34.7995158      83.0000000     888.0000000
+  DBP             75.9070096      42.4407364      23.0000000     888.0000000
+  SEX              1.5304239       0.4990735       1.0000000       2.0000000
+  PIR              103521.01       285131.70               0       888888.00
+  HYPERTENSION     1.7432671       0.5881052       1.0000000       9.0000000
+  CHOLESTEROL      1.6825476       0.5975765       1.0000000       9.0000000
+  ELIGSTAT         1.0014963       0.0546835       1.0000000       3.0000000
+  MORTSTAT         0.1687048       0.3744910               0       1.0000000
+  PERMTH_INT     101.8824557      29.9761394               0     146.0000000
+  PERMTH_EXM     101.8071192      29.1365925               0     145.0000000
+  DIAB             0.1005917       0.3007874               0       1.0000000
+  HYPERTEN         0.0872781       0.2822422               0       1.0000000
+  HIPFRACT         0.0088757       0.0937921               0       1.0000000
+  DEATH            0.1687048       0.3744910               0       1.0000000
+  CVD              0.0803594       0.2718488               0       1.0000000
+  CANCER           0.0379336       0.1910358               0       1.0000000
+  STROKE           0.0881913       0.2835730               0       1.0000000
+  COLON            0.1001495       0.3001992               0       1.0000000
+  --------------------------------------------------------------------------
+                            Descriptive statistics                            3
+                                               15:16 Thursday, January 21, 2021
+
+                              The ANOVA Procedure
+
+                           Class Level Information
+ 
+                        Class         Levels    Values
+
+                        SEX                2    1 2   
+
+
+                      Data for Analysis of AGE EDUCATION
+
+                    Number of Observations Read    40100000
+                    Number of Observations Used    40100000
+
+
+                         Data for Analysis of SBP DBP
+
+                    Number of Observations Read    40100000
+                    Number of Observations Used    35380000
+
+
+NOTE: Variables in each group are consistent with respect to the presence or 
+      absence of missing values.
+                            Descriptive statistics                            4
+                                               15:16 Thursday, January 21, 2021
+
+                              The ANOVA Procedure
+ 
+                          Dependent Variable: AGE   
+
+                                      Sum of
+Source                     DF        Squares    Mean Square   F Value   Pr > F
+
+Model                       1       10551805       10551805   24149.1   <.0001
+
+Error                  4.01E7    17521442571            437                   
+
+Corrected Total        4.01E7    17531994377                                  
+
+
+              R-Square     Coeff Var      Root MSE      AGE Mean
+
+              0.000602      43.78834      20.90320      47.73691
+
+
+Source                     DF       Anova SS    Mean Square   F Value   Pr > F
+
+SEX                         1    10551805.12    10551805.12   24149.1   <.0001
+                            Descriptive statistics                            5
+                                               15:16 Thursday, January 21, 2021
+
+                              The ANOVA Procedure
+ 
+    Dependent Variable: EDUCATION   Highest grade or yr of school completed
+
+                                      Sum of
+Source                     DF        Squares    Mean Square   F Value   Pr > F
+
+Model                       1         413023         413023   4513.91   <.0001
+
+Error                  4.01E7     3669148197             91                   
+
+Corrected Total        4.01E7     3669561219                                  
+
+
+            R-Square     Coeff Var      Root MSE    EDUCATION Mean
+
+            0.000113      81.40298      9.565561          11.75087
+
+
+Source                     DF       Anova SS    Mean Square   F Value   Pr > F
+
+SEX                         1    413022.9060    413022.9060   4513.91   <.0001
+                            Descriptive statistics                            6
+                                               15:16 Thursday, January 21, 2021
+
+                              The ANOVA Procedure
+ 
+      Dependent Variable: SBP   Overall average K1, systolic, BP(age 5+)
+
+                                      Sum of
+Source                     DF        Squares    Mean Square   F Value   Pr > F
+
+Model                       1      236174532      236174532    196104   <.0001
+
+Error                  3.54E7    42609227122           1204                   
+
+Corrected Total        3.54E7    42845401653                                  
+
+
+              R-Square     Coeff Var      Root MSE      SBP Mean
+
+              0.005512      27.52015      34.70347      126.1020
+
+
+Source                     DF       Anova SS    Mean Square   F Value   Pr > F
+
+SEX                         1    236174531.7    236174531.7    196104   <.0001
+                            Descriptive statistics                            7
+                                               15:16 Thursday, January 21, 2021
+
+                              The ANOVA Procedure
+ 
+      Dependent Variable: DBP   Overall average K5, diastolic, BP(age5+)
+
+                                      Sum of
+Source                     DF        Squares    Mean Square   F Value   Pr > F
+
+Model                       1      225116805      225116805    125424   <.0001
+
+Error                  3.54E7    63501907257           1795                   
+
+Corrected Total        3.54E7    63727024062                                  
+
+
+              R-Square     Coeff Var      Root MSE      DBP Mean
+
+              0.003533      55.81264      42.36571      75.90701
+
+
+Source                     DF       Anova SS    Mean Square   F Value   Pr > F
+
+SEX                         1    225116804.8    225116804.8    125424   <.0001
+                            Descriptive statistics                            8
+                                               15:16 Thursday, January 21, 2021
+
+                              The FREQ Procedure
+
+                                           Cumulative    Cumulative
+           SEX    Frequency     Percent     Frequency      Percent
+           --------------------------------------------------------
+             1    18830000       46.96      18830000        46.96  
+             2    21270000       53.04      40100000       100.00  
+
+
+                                   Ethnicity
+ 
+                                              Cumulative    Cumulative
+         DMAETHNR    Frequency     Percent     Frequency      Percent
+         -------------------------------------------------------------
+                1    10680000       26.63      10680000        26.63  
+                2      940000        2.34      11620000        28.98  
+                3    28480000       71.02      40100000       100.00  
+
+
+                                      Race
+ 
+                                              Cumulative    Cumulative
+         DMARACER    Frequency     Percent     Frequency      Percent
+         -------------------------------------------------------------
+                1    27660000       68.98      27660000        68.98  
+                2    11130000       27.76      38790000        96.73  
+                3     1300000        3.24      40090000        99.98  
+                8       10000        0.02      40100000       100.00  
+
+
+                                 Race-ethnicity
+ 
+                                              Cumulative    Cumulative
+         DMARETHN    Frequency     Percent     Frequency      Percent
+         -------------------------------------------------------------
+                1    17050000       42.52      17050000        42.52  
+                2    10840000       27.03      27890000        69.55  
+                3    10680000       26.63      38570000        96.18  
+                4     1530000        3.82      40100000       100.00  
+
+
+                      Rural/urban code based on USDA code
+ 
+                                              Cumulative    Cumulative
+         DMPMETRO    Frequency     Percent     Frequency      Percent
+         -------------------------------------------------------------
+                1    19610000       48.90      19610000        48.90  
+                2    20490000       51.10      40100000       100.00  
+
+
+                            Descriptive statistics                            9
+                                               15:16 Thursday, January 21, 2021
+
+                              The FREQ Procedure
+
+                                            Cumulative    Cumulative
+          DEATH    Frequency     Percent     Frequency      Percent
+          ----------------------------------------------------------
+              0    33310000       83.13      33310000        83.13  
+              1     6760000       16.87      40070000       100.00  
+
+                           Frequency Missing = 30000
+
+
+                    Describe natural teeth: excellent...poor
+ 
+                                                Cumulative    Cumulative
+       DENTALHEALTH    Frequency     Percent     Frequency      Percent
+       -----------------------------------------------------------------
+                  1     2970000        7.41       2970000         7.41  
+                  2     4950000       12.34       7920000        19.75  
+                  3    11360000       28.33      19280000        48.08  
+                  4     9400000       23.44      28680000        71.52  
+                  5     6020000       15.01      34700000        86.53  
+                  6     5350000       13.34      40050000        99.88  
+                 88       40000        0.10      40090000        99.98  
+                 99       10000        0.02      40100000       100.00  
+
+
+             HIP FRACTURE FLAG FROM MULTIPLE CAUSE OF DEATH (MCOD)
+ 
+                                              Cumulative    Cumulative
+         HIPFRACT    Frequency     Percent     Frequency      Percent
+         -------------------------------------------------------------
+                0     6700000       99.11       6700000        99.11  
+                1       60000        0.89       6760000       100.00  
+
+                          Frequency Missing = 33340000
+
+
+                                Marital status
+ 
+                                             Cumulative    Cumulative
+         MARITAL    Frequency     Percent     Frequency      Percent
+         ------------------------------------------------------------
+               1    20470000       51.05      20470000        51.05  
+               2      680000        1.70      21150000        52.74  
+               3     1560000        3.89      22710000        56.63  
+               4     4940000       12.32      27650000        68.95  
+               5     2620000        6.53      30270000        75.49  
+               6     1310000        3.27      31580000        78.75  
+               7     8340000       20.80      39920000        99.55  
+              88      180000        0.45      40100000       100.00  
+                            Descriptive statistics                           10
+                                               15:16 Thursday, January 21, 2021
+
+                              The FREQ Procedure
+
+                                             Cumulative    Cumulative
+          CANCER    Frequency     Percent     Frequency      Percent
+          -----------------------------------------------------------
+               0    38550000       96.21      38550000        96.21  
+               1     1520000        3.79      40070000       100.00  
+
+                           Frequency Missing = 30000
+
+
+                   Doctor told blood cholesterol level high
+ 
+                                               Cumulative    Cumulative
+       CHOLESTEROL    Frequency     Percent     Frequency      Percent
+       ----------------------------------------------------------------
+                 1     6680000       33.50       6680000        33.50  
+                 2    13210000       66.25      19890000        99.75  
+                 9       50000        0.25      19940000       100.00  
+
+                         Frequency Missing = 20160000
+
+
+                                            Cumulative    Cumulative
+          COLON    Frequency     Percent     Frequency      Percent
+          ----------------------------------------------------------
+              0     6020000       89.99       6020000        89.99  
+              1      670000       10.01       6690000       100.00  
+
+                         Frequency Missing = 33410000
+
+
+                                           Cumulative    Cumulative
+           CVD    Frequency     Percent     Frequency      Percent
+           --------------------------------------------------------
+             0    36850000       91.96      36850000        91.96  
+             1     3220000        8.04      40070000       100.00  
+
+                           Frequency Missing = 30000
+
+
+                              DIABETES:1=YES 2=NO
+ 
+                                              Cumulative    Cumulative
+         DIABETES    Frequency     Percent     Frequency      Percent
+         -------------------------------------------------------------
+                1     2920000        7.28       2920000         7.28  
+                2    37180000       92.72      40100000       100.00  
+
+
+                            Descriptive statistics                           11
+                                               15:16 Thursday, January 21, 2021
+
+                              The FREQ Procedure
+
+                     Doctor ever told had hypertension/HBP
+ 
+                                                Cumulative    Cumulative
+       HYPERTENSION    Frequency     Percent     Frequency      Percent
+       -----------------------------------------------------------------
+                  1    10970000       27.61      10970000        27.61  
+                  2    28650000       72.11      39620000        99.72  
+                  9      110000        0.28      39730000       100.00  
+
+                           Frequency Missing = 370000
+
+
+                    Is health in general excellent,...,poor
+ 
+                                             Cumulative    Cumulative
+          HEALTH    Frequency     Percent     Frequency      Percent
+          -----------------------------------------------------------
+               1     6070000       15.14       6070000        15.14  
+               2     9230000       23.02      15300000        38.15  
+               3    14690000       36.63      29990000        74.79  
+               4     8110000       20.22      38100000        95.01  
+               5     1950000        4.86      40050000        99.88  
+               8       20000        0.05      40070000        99.93  
+               9       30000        0.07      40100000       100.00  
+
+
+                                             Cumulative    Cumulative
+          STROKE    Frequency     Percent     Frequency      Percent
+          -----------------------------------------------------------
+               0     6100000       91.18       6100000        91.18  
+               1      590000        8.82       6690000       100.00  
+
+                          Frequency Missing = 33410000
+                       Correlation-Age and Diastolic BP                      12
+                                               15:16 Thursday, January 21, 2021
+
+                              The CORR Procedure
+
+                       2  Variables:    AGE      DBP      
+                                     Table                                   13
+                                               15:16 Thursday, January 21, 2021
+
+    -----------------------------------------------------------------------
+    |                 |HIP FRACTURE|            |            |            |
+    |                 | FLAG FROM  |            |            |            |
+    |                 |  MULTIPLE  |            |            |            |
+    |                 |  CAUSE OF  |            |            |            |
+    |                 |DEATH (MCOD)| cancertot  |  colontot  |   cvdtot   |
+    |-----------------+------------+------------+------------+------------|
+    |SEX     |        |            |            |            |            |
+    |--------+--------|            |            |            |            |
+    |1       |N       |  3610000.00| 18820000.00|  3550000.00| 18820000.00|
+    |        |--------+------------+------------+------------+------------|
+    |        |Mean    |      110.80|      435.71|      985.92|      892.67|
+    |        |--------+------------+------------+------------+------------|
+    |        |Max     |    10000.00|    10000.00|    10000.00|    10000.00|
+    |--------+--------+------------+------------+------------+------------|
+    |2       |N       |  3150000.00| 21250000.00|  3140000.00| 21250000.00|
+    |        |--------+------------+------------+------------+------------|
+    |        |Mean    |       63.49|      329.41|     1019.11|      724.71|
+    |        |--------+------------+------------+------------+------------|
+    |        |Max     |    10000.00|    10000.00|    10000.00|    10000.00|
+    -----------------------------------------------------------------------
+
+    (Continued)
+                                     Table                                   14
+                                               15:16 Thursday, January 21, 2021
+
+                       --------------------------------
+                       |                 | stroketot  |
+                       |-----------------+------------|
+                       |SEX     |        |            |
+                       |--------+--------|            |
+                       |1       |N       |  3550000.00|
+                       |        |--------+------------|
+                       |        |Mean    |      816.90|
+                       |        |--------+------------|
+                       |        |Max     |    10000.00|
+                       |--------+--------+------------|
+                       |2       |N       |  3140000.00|
+                       |        |--------+------------|
+                       |        |Mean    |      955.41|
+                       |        |--------+------------|
+                       |        |Max     |    10000.00|
+                       --------------------------------
+                                  Data Report                                15
+                                               15:16 Thursday, January 21, 2021
+
+                                          HIP                                
+                                        FRACT                                
+                                          URE                                
+                                         FLAG                                
+                                         FROM                                
+                                        MULTI                                
+                               SMOKING    PLE                                
+                               :1=CURR  CAUSE                                
+                                   ENT     OF                                
+                 Is health in  2=FORME  DEATH                                
+                      general        R  (MCOD  cance  colon             strok
+    SEX    excellent,...,poor  3=NEVER      )   rtot    tot     cvdtot   etot
+ Female  Blank but applicable  Former       .      0      .          0      .
+                               Never        .      0      .          0      .
+         Dont know             Never        0      0      0  100000000      0
+         Excellent             Current      0    2E8      0  100000000      0
+                               Former       0    2E8      0          0      0
+                               Never        0    4E8      0        1E9    1E8
+         Fair                  Current      0    7E8    3E8        1E9    2E8
+                               Former       0    7E8    3E8      1.1E9    6E8
+                               Never        0   15E8    8E8      2.6E9    5E8
+         Good                  Current      0    5E8    1E8  300000000      0
+                               Former       0    5E8    3E8  700000000    1E8
+                               Never      1E8    6E8    1E8      3.6E9    4E8
+         Poor                  Current      0      0      0  300000000    1E8
+                               Former       0    2E8    2E8  900000000      0
+                               Never        0    2E8    8E8      1.1E9    4E8
+         Very good             Current      0    2E8    1E8  400000000    2E8
+                               Former       0    4E8      0  600000000    1E8
+                               Never      1E8    7E8    2E8      1.6E9    3E8
+ Male    Dont know             Never        0    1E8      0          0      0
+         Excellent             Current      0    2E8      0  100000000      0
+                               Former       0    3E8    2E8  400000000      0
+                               Never        0    4E8      0  400000000    1E8
+         Fair                  Current      0    7E8    1E8      1.2E9    2E8
+                               Former     1E8   16E8    8E8      2.8E9    5E8
+                               Never        0    5E8    3E8      1.8E9    2E8
+         Good                  Current      0    7E8    2E8      1.5E9    2E8
+                               Former       0   16E8    6E8      2.4E9    5E8
+                               Never        0    5E8    4E8      1.4E9    3E8
+         Poor                  Current      0    4E8    3E8  400000000    1E8
+                               Former       0    1E8    4E8        2E9    6E8
+                               Never      2E8    1E8    1E8  400000000      0
+         Very good             Current      0    1E8      0  400000000      0
+                               Former       0    6E8    1E8      1.2E9    2E8
+                               Never      1E8    3E8      0  400000000      0

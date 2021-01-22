@@ -1,0 +1,89 @@
+                                                           The SAS System                        12:10 Tuesday, January 19, 2021   1
+
+                                                       The CONTENTS Procedure
+
+            Data Set Name        WORK.TEST                                                Observations          40100000
+            Member Type          DATA                                                     Variables             43      
+            Engine               V9                                                       Indexes               0       
+            Created              01/19/2021 12:10:32                                      Observation Length    304     
+            Last Modified        01/19/2021 12:10:32                                      Deleted Observations  0       
+            Protection                                                                    Compressed            NO      
+            Data Set Type                                                                 Sorted                NO      
+            Label                                                                                                       
+            Data Representation  SOLARIS_X86_64, LINUX_X86_64, ALPHA_TRU64, LINUX_IA64                                  
+            Encoding             latin1  Western (ISO)                                                                  
+
+
+                                                 Engine/Host Dependent Information
+
+                   Data Set Page Size          65536                                                             
+                   Number of Data Set Pages    186512                                                            
+                   First Data Page             1                                                                 
+                   Max Obs per Page            215                                                               
+                   Obs in First Data Page      187                                                               
+                   Number of Data Set Repairs  0                                                                 
+                   Filename                    /tmp/SAS_work7F8100025A8E_hal0213.amarel.rutgers.edu/test.sas7bdat
+                   Release Created             9.0401M5                                                          
+                   Host Created                Linux                                                             
+                   Inode Number                3288426                                                           
+                   Access Permission           rw-rw-r--                                                         
+                   Owner Name                  egr33                                                             
+                   File Size                   11GB                                                              
+                   File Size (bytes)           12223315968                                                       
+
+
+                                             Alphabetic List of Variables and Attributes
+ 
+                #    Variable        Type    Len    Format    Label
+
+               23    AGE             Num       8                                                                     
+               13    BMPHT           Num       8    Z7.1      Standing height (cm) (2 years and over)                
+               12    BMPWT           Num       8    Z9.2      Weight (kg) (2 months and over)                        
+               41    CANCER          Num       8                                                                     
+               29    CHOLESTEROL     Num       8              Doctor told blood cholesterol level high               
+               19    CIGARETTES      Num       8              # cigarettes smoked per day                            
+               43    COLON           Num       8                                                                     
+               40    CVD             Num       8                                                                     
+               25    DBP             Num       8              Overall average K5, diastolic, BP(age5+)               
+               39    DEATH           Num       8                                                                     
+               18    DENTALHEALTH    Num       8              Describe natural teeth: excellent...poor               
+               36    DIAB            Num       8              DIABETES FLAG FROM MULTIPLE CAUSE OF DEATH (MCOD)      
+               14    DIABETES        Num       8              DIABETES:1=YES 2=NO                                    
+                4    DMAETHNR        Num       3              Ethnicity                                              
+                3    DMARACER        Num       3              Race                                                   
+                2    DMARETHN        Num       3              Race-ethnicity                                         
+                6    DMPCREGN        Num       3              Census region, weighting(Texas in south)               
+                5    DMPMETRO        Num       3              Rural/urban code based on USDA code                    
+               16    EDUCATION       Num       8              Highest grade or yr of school completed                
+               31    ELIGSTAT        Num       8              ELIGIBILITY STATUS FOR MORTALITY FOLLOW-UP             
+               17    HEALTH          Num       8              Is health in general excellent,...,poor                
+               38    HIPFRACT        Num       8              HIP FRACTURE FLAG FROM MULTIPLE CAUSE OF DEATH (MCOD)  
+                                                           The SAS System                        12:10 Tuesday, January 19, 2021   2
+
+                                                       The CONTENTS Procedure
+
+                                             Alphabetic List of Variables and Attributes
+ 
+                #    Variable        Type    Len    Format    Label
+
+               37    HYPERTEN        Num       8              HYPERTENSION FLAG FROM MULTIPLE CAUSE OF DEATH (MCOD)  
+               28    HYPERTENSION    Num       8              Doctor ever told had hypertension/HBP                  
+               22    INCOME          Num       8              Total family 12 month income group                     
+               21    INCOME20K       Num       8              Total family 12 month income < $20,000                 
+               20    MARITAL         Num       8              Marital status                                         
+               32    MORTSTAT        Num       8              FINAL MORTALITY STATUS                                 
+               34    PERMTH_EXM      Num       8              PERSON MONTHS OF FOLLOW-UP FROM MEC/HOME EXAM DATE     
+               33    PERMTH_INT      Num       8              PERSON MONTHS OF FOLLOW-UP FROM INTV. DATE             
+               27    PIR             Num       8              Poverty Income Ratio (unimputed income)                
+               30    PUBLICID        Char      5              PUBLIC-USE ID                                          
+               24    SBP             Num       8              Overall average K1, systolic, BP(age 5+)               
+                7    SDPPSU6         Num       4              Total NHANES III pseudo-PSU                            
+                8    SDPSTRA6        Num       4              Total NHANES III pseudo-stratum                        
+                1    SEQN            Num       7              Sequence number                                        
+               26    SEX             Num       8                                                                     
+               15    SMOKING         Num       8              SMOKING:1=CURRENT 2=FORMER 3=NEVER                     
+               42    STROKE          Num       8                                                                     
+               35    UCOD_113        Char      3              UNDERLYING CAUSE OF DEATH 113 GROUPS ALL YEARS (ICD-10)
+               10    WTPFEX6         Num       8    Z9.2      Total MEC examined sample final weight                 
+               11    WTPFHX6         Num       8    Z9.2      Total M+H examined sample final weight                 
+                9    WTPFQX6         Num       8    Z9.2      Total interviewed sample final weight                  

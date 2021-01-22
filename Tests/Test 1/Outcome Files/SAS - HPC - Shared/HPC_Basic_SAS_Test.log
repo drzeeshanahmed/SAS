@@ -1,0 +1,288 @@
+1                                                          The SAS System                           15:16 Thursday, January 21, 2021
+
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M5) 
+      Licensed to RUTGERS UNIVERSITY - SFA -T&R, Site 70078826.
+NOTE: This session is executing on the Linux 3.10.0-1160.11.1.el7.x86_64 (LIN X64) platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ Linux LIN X64 3.10.0-1160.11.1.el7.x86_64 #1 SMP Fri Dec 18 16:34:56 UTC 2020 x86_64 CentOS Linux release 7.9.2009 (Core) 
+
+You are running SAS 9. Some SAS 8 files will be automatically converted 
+by the V9 engine; others are incompatible.  Please see 
+http://support.sas.com/rnd/migration/planning/platform/64bit.html
+
+PROC MIGRATE will preserve current SAS file attributes and is 
+recommended for converting all your SAS libraries from any 
+SAS 8 release to SAS 9.  For details and examples, please see
+http://support.sas.com/rnd/migration/index.html
+
+
+This message is contained in the SAS news file, and is presented upon
+initialization.  Edit the file "news" in the "misc/base" directory to
+display site-specific news and information in the program log.
+The command line option "-nonews" will prevent this display.
+
+
+
+
+NOTE: SAS initialization used:
+      real time           1.16 seconds
+      cpu time            0.05 seconds
+      
+1          /********************************************************************************************
+2          Project: High Performance Computing- Testing
+3          Program: Running some basic functions
+4          Run twice
+5          Dataset: nhanes3 (smaller), nh(big data)
+6          Analyst: Charu Verma
+7          Date: 01.15.2021*/
+8          libname lib "/home/egr33/SASData";
+NOTE: Libref LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: /home/egr33/SASData
+9          data test;
+10         set lib.nhanes_bigdata;
+11         run;
+
+NOTE: There were 40100000 observations read from the data set LIB.NHANES_BIGDATA.
+NOTE: The data set WORK.TEST has 40100000 observations and 43 variables.
+2                                                          The SAS System                           15:16 Thursday, January 21, 2021
+
+NOTE: DATA statement used (Total process time):
+      real time           17.19 seconds
+      cpu time            13.20 seconds
+      
+
+12         proc contents data=test;
+13         run;
+
+NOTE: PROCEDURE CONTENTS used (Total process time):
+      real time           0.64 seconds
+      cpu time            0.04 seconds
+      
+NOTE: The PROCEDURE CONTENTS printed pages 1-2.
+
+14         options number pageno=1 ls=79 ps=59 ;
+15         options formchar = "|----|+|---+=|-/\<>*";
+16         proc printto new
+16       ! print='/home/egr33/SASData/01152020_(HPC)_BasicSAS_test.txt';
+17         run;
+
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+18         /*Descriptive statistics*/
+19         title 'Descriptive statistics';
+20         proc means data = test;
+21          var _numeric_;
+22         run;
+
+NOTE: There were 40100000 observations read from the data set WORK.TEST.
+NOTE: The PROCEDURE MEANS printed pages 1-2.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           19.62 seconds
+      cpu time            46.99 seconds
+      
+
+23         proc anova data=test;
+24          class sex;
+25          model age education sbp dbp  = sex;
+26         run;
+
+NOTE: The PROCEDURE ANOVA printed pages 3-7.
+NOTE: PROCEDURE ANOVA used (Total process time):
+      real time           18.04 seconds
+      cpu time            17.95 seconds
+      
+
+27         proc freq data=test;
+28          tables sex  dmaethnr dmaracer dmarethn dmpmetro death dentalhealth
+28       ! hipfract marital
+29          cancer cholesterol colon cvd diabetes hypertension health stroke;
+30         run;
+
+NOTE: There were 40100000 observations read from the data set WORK.TEST.
+NOTE: The PROCEDURE FREQ printed pages 8-11.
+3                               The SAS System
+                                               15:16 Thursday, January 21, 2021
+
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           16.30 seconds
+      cpu time            16.27 seconds
+      
+
+31         title 'Correlation-Age and Diastolic BP';
+32         proc corr data=test nomiss spearman;
+33          var age dbp;
+34         run;
+
+ERROR: Unable to allocate sufficient memory. At least 276407K bytes were 
+       requested, but only 262142K were available. You must either increase 
+       the amount of memory available, or approach the problem differently.
+NOTE: The PROCEDURE CORR printed page 12.
+NOTE: PROCEDURE CORR used (Total process time):
+      real time           5.27 seconds
+      cpu time            5.27 seconds
+      
+
+35         proc summary data=test;
+36           var hipfract cancer colon cvd stroke;
+37           class seqn;
+38           output out=work.summary1 (drop=_type_freq_)
+39           sum= hipfracttot cancertot colontot cvdtot stroketot;
+40         run;
+
+WARNING: The variable _type_freq_ in the DROP, KEEP, or RENAME list has never 
+         been referenced.
+NOTE: There were 40100000 observations read from the data set WORK.TEST.
+NOTE: The data set WORK.SUMMARY1 has 4011 observations and 8 variables.
+NOTE: PROCEDURE SUMMARY used (Total process time):
+      real time           13.91 seconds
+      cpu time            25.84 seconds
+      
+
+41         proc sort data=work.summary1 out=total;by seqn;run;
+
+NOTE: There were 4011 observations read from the data set WORK.SUMMARY1.
+NOTE: The data set WORK.TOTAL has 4011 observations and 8 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.06 seconds
+      cpu time            0.00 seconds
+      
+
+42         proc sort data=test; by seqn;run;
+
+NOTE: There were 40100000 observations read from the data set WORK.TEST.
+NOTE: The data set WORK.TEST has 40100000 observations and 43 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           20.02 seconds
+      cpu time            44.52 seconds
+      
+
+43         proc sql;
+44         	create table tot_summary as
+45         	 select *
+4                               The SAS System
+                                               15:16 Thursday, January 21, 2021
+
+46         		from summary1  a inner join test b
+47         	on a.seqn =b.seqn;
+WARNING: Variable SEQN already exists on file WORK.TOT_SUMMARY.
+NOTE: Table WORK.TOT_SUMMARY created, with 40100000 rows and 50 columns.
+
+48         quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           23.97 seconds
+      cpu time            23.83 seconds
+      
+
+49         proc tabulate data= tot_summary;
+50         title 'Table';
+51             class sex;
+52         	var hipfracttot cancertot colontot cvdtot stroketot;
+53         	table sex * (N Mean Max) ,
+54                     hipfracttot cancertot colontot cvdtot stroketot;
+55         run;
+
+NOTE: There were 40100000 observations read from the data set WORK.TOT_SUMMARY.
+NOTE: The PROCEDURE TABULATE printed pages 13-14.
+NOTE: PROCEDURE TABULATE used (Total process time):
+      real time           6.77 seconds
+      cpu time            10.86 seconds
+      
+
+56         proc format;
+57         value race
+58         1=	"Non-Hispanic white"
+59         2=	"Non-Hispanic black"
+60         3=	"Mexican-American"	
+61         4=	"Other"	
+62         ;
+NOTE: Format RACE has been output.
+63         value gender
+64         1=	"Male"	
+65         2=	"Female"
+66         ;
+NOTE: Format GENDER has been output.
+67         value health
+68         1=	"Excellent"	
+69         2=	"Very good"	
+70         3=	"Good"	
+71         4=	"Fair"	
+72         5=	"Poor"	
+73         8=	"Blank but applicable"	
+74         9=	"Dont know"
+75         ;
+NOTE: Format HEALTH has been output.
+76         
+77         value smoke
+78         1=	"Current"
+79         2=	"Former"
+80         3=	"Never"
+81         ;
+NOTE: Format SMOKE has been output.
+5                               The SAS System
+                                               15:16 Thursday, January 21, 2021
+
+82         run;
+
+NOTE: PROCEDURE FORMAT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+83         data summary_rep;
+84         set tot_summary;
+85          format sex gender. smoking smoke. health health. dmarethn race.;
+86          run;
+
+NOTE: There were 40100000 observations read from the data set WORK.TOT_SUMMARY.
+NOTE: The data set WORK.SUMMARY_REP has 40100000 observations and 50 variables.
+NOTE: DATA statement used (Total process time):
+      real time           13.46 seconds
+      cpu time            13.45 seconds
+      
+
+87         
+88         proc report data= summary_rep;
+89         	title 'Data Report';
+90         	column sex health smoking hipfracttot cancertot colontot cvdtot
+90       ! stroketot;
+91         	define sex/group;
+92         	define health/group;
+93         	define smoking/group;
+94         	define hipfracttot/analysis sum width=5;
+95         	define cancertot/analysis sum width=5;
+96         	define colontot/analysis sum width=5;
+97         	define stroketot/analysis sum width=5;
+98         	
+99         run;
+
+NOTE: There were 40100000 observations read from the data set WORK.SUMMARY_REP.
+NOTE: The PROCEDURE REPORT printed page 15.
+NOTE: PROCEDURE REPORT used (Total process time):
+      real time           7.19 seconds
+      cpu time            13.56 seconds
+      
+
+ERROR: Errors printed on page 3.
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           2:44.10
+      cpu time            3:51.86
+      
